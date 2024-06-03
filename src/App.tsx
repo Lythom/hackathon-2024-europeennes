@@ -44,6 +44,11 @@ function App() {
             if (weights[match] == null) weights[match] = 1
             else weights[match]++
         }
+        const unmatches = a === "yes" ? q.no : a === 'no' ? q.yes : []
+        for (const unmatch of unmatches) {
+            if (weights[unmatch] == null) weights[unmatch] = -1
+            else weights[unmatch]--
+        }
     }
 
     return (
@@ -56,14 +61,23 @@ function App() {
                             <a className="flex-none text-xl font-semibold text-white focus:outline-none focus:ring-1 focus:ring-gray-600"
                                href="#" aria-label="Brand">Mon europe 2024</a>
                         </div>
+
+                        {started && question == null && <div className="items-end">
+                            <Button onClick={() => {
+                                setStarted(false);
+                                setAnswers([])
+                            }}
+                                    className="mt-3 w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none">
+                                Recommencer !
+                            </Button>
+                        </div>}
                     </nav>
                 </header>
                 <main id="content">
-                    <div className="text-center py-10 px-4 sm:px-6 lg:px-8">
+                <div className="text-center py-10 px-4 sm:px-6 lg:px-8">
                         <h1 className="block text-2xl font-bold text-white sm:text-4xl">Mon europe 2024</h1>
                         {!started && <>
-                            <p className="mt-3 text-lg text-gray-300">Répondez à une suite de questions, nous
-                                identifierons les listes les plus à même de vous plaire.</p>
+                            <p className="mt-3 text-lg text-gray-300">Répondez à ces questions avec précision,<br />pour découvrir les listes qui sont en accord avec votre vision</p>
                             <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
                                 <Button onClick={() => setStarted(true)}
                                         className="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none">

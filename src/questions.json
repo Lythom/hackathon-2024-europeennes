@@ -1,112 +1,112 @@
 [
   {
-    "question": "Souhaitez-vous rester dans l'UE et renforcer ses institutions ?",
-    "yes": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
-    "no": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Parti Animaliste", "Liberté Démocratique Française", "Rassemblement National"]
+    "question": "Souhaitez-vous rester dans l'UE et renforcer ses institutions ?",
+    "yes": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
+    "no": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"]
   },
   {
-    "question": "Souhaitez-vous une réforme profonde de l'UE ?",
-    "yes": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Parti Animaliste", "Liberté Démocratique Française", "Rassemblement National"],
-    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
-  },
-  {
-    "question": "Êtes-vous favorable à une sortie de l'UE (Frexit) ?",
+    "question": "Souhaitez-vous une réforme profonde de l'UE ?",
     "yes": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"],
-    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Animaliste"]
+    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Soutenez-vous des mesures ambitieuses pour atteindre 100% d'énergies renouvelables ?",
-    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
+    "question": "Êtes-vous favorable à une sortie de l'UE (Frexit) ?",
+    "yes": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"],
+    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen", "Parti Animaliste"]
+  },
+  {
+    "question": "Soutenez-vous des mesures ambitieuses pour atteindre 100% d'énergies renouvelables ?",
+    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!", "Parti Révolutionnaire Communistes"]
   },
   {
-    "question": "Êtes-vous favorable à la relance du nucléaire comme solution énergétique ?",
+    "question": "Êtes-vous favorable à la relance du nucléaire comme solution énergétique ?",
     "yes": ["Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!", "Centre Gauche Européen"],
-    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste"]
+    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes"]
   },
   {
-    "question": "Êtes-vous pour des politiques d'accueil et d'intégration des migrants ?",
-    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Communiste Français"],
+    "question": "Êtes-vous pour des politiques d'accueil et d'intégration des migrants ?",
+    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!", "Parti Révolutionnaire Communistes"]
   },
   {
-    "question": "Préférez-vous des politiques de contrôle strict des frontières et de réduction de l'immigration ?",
+    "question": "Préférez-vous des politiques de contrôle strict des frontières et de réduction de l'immigration ?",
     "yes": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!", "Parti Révolutionnaire Communistes"],
-    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Communiste Français"]
+    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Soutenez-vous une agriculture biologique et durable avec des aides à la transition écologique ?",
-    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
+    "question": "Soutenez-vous une agriculture biologique et durable avec des aides à la transition écologique ?",
+    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"]
   },
   {
-    "question": "Préférez-vous une agriculture intensive et conventionnelle pour assurer la souveraineté alimentaire ?",
+    "question": "Préférez-vous une agriculture intensive et conventionnelle pour assurer la souveraineté alimentaire ?",
     "yes": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"],
-    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
+    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Soutenez-vous des mesures pour augmenter les salaires et réduire les inégalités ?",
-    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Communiste Français", "NPA-Révolutionnaires", "Parti des Travailleurs"],
+    "question": "Soutenez-vous des mesures pour augmenter les salaires et réduire les inégalités ?",
+    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen", "NPA-Révolutionnaires", "Parti des Travailleurs"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"]
   },
   {
-    "question": "Êtes-vous favorable à la flexibilisation du marché du travail et à la réduction des charges pour les entreprises ?",
+    "question": "Êtes-vous favorable à la flexibilisation du marché du travail et à la réduction des charges pour les entreprises ?",
     "yes": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"],
-    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Communiste Français", "NPA-Révolutionnaires", "Parti des Travailleurs"]
+    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen", "NPA-Révolutionnaires", "Parti des Travailleurs"]
   },
   {
-    "question": "Souhaitez-vous renforcer la souveraineté nationale en limitant les pouvoirs de l'UE ?",
+    "question": "Souhaitez-vous renforcer la souveraineté nationale en limitant les pouvoirs de l'UE ?",
     "yes": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"],
-    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
+    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Préférez-vous une souveraineté partagée avec des institutions européennes fortes ?",
-    "yes": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
+    "question": "Préférez-vous une souveraineté partagée avec des institutions européennes fortes ?",
+    "yes": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"]
   },
   {
-    "question": "Soutenez-vous la création d'une armée européenne ?",
-    "yes": ["PACE", "Écologie Positive", "Changer l'Europe", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
+    "question": "Soutenez-vous la création d'une armée européenne ?",
+    "yes": ["PACE", "Écologie Positive", "Changer l'Europe", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!", "Parti Révolutionnaire Communistes"]
   },
   {
-    "question": "Préférez-vous renforcer les capacités de défense nationales et l'OTAN ?",
+    "question": "Préférez-vous renforcer les capacités de défense nationales et l'OTAN ?",
     "yes": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"],
-    "no": ["PACE", "Écologie Positive", "Changer l'Europe", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
+    "no": ["PACE", "Écologie Positive", "Changer l'Europe", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Soutenez-vous des mesures pour renforcer les droits des minorités et l'égalité des genres ?",
-    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
+    "question": "Soutenez-vous des mesures pour renforcer les droits des minorités et l'égalité des genres ?",
+    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"]
   },
   {
-    "question": "Préférez-vous des politiques plus conservatrices sur les questions de société ?",
+    "question": "Préférez-vous des politiques plus conservatrices sur les questions de société ?",
     "yes": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"],
-    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
+    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Soutenez-vous une augmentation des impôts pour les plus riches et les grandes entreprises ?",
-    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Communiste Français", "NPA-Révolutionnaires", "Parti des Travailleurs"],
+    "question": "Soutenez-vous une augmentation des impôts pour les plus riches et les grandes entreprises ?",
+    "yes": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen", "NPA-Révolutionnaires", "Parti des Travailleurs"],
     "no": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"]
   },
   {
-    "question": "Préférez-vous une réduction des impôts et des charges pour stimuler l'économie ?",
+    "question": "Préférez-vous une réduction des impôts et des charges pour stimuler l'économie ?",
     "yes": ["Union Souveraine", "Majorité Présidentielle", "Les Républicains", "Rassemblement National", "Reconquête!"],
-    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen", "Parti Communiste Français", "NPA-Révolutionnaires", "Parti des Travailleurs"]
+    "no": ["PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen", "NPA-Révolutionnaires", "Parti des Travailleurs"]
   },
   {
-    "question": "Soutenez-vous des mesures pour renforcer la démocratie participative et les référendums d'initiative citoyenne ?",
+    "question": "Soutenez-vous des mesures pour renforcer la démocratie participative et les référendums d'initiative citoyenne ?",
     "yes": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"],
-    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
+    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   },
   {
-    "question": "Préférez-vous des institutions représentatives fortes avec des élus responsables ?",
-    "yes": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"],
+    "question": "Préférez-vous des institutions représentatives fortes avec des élus responsables ?",
+    "yes": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"],
     "no": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"]
   },
   {
-    "question": "Êtes-vous favorable à des réformes pour plus de transparence et de contrôle citoyen ?",
+    "question": "Êtes-vous favorable à des réformes pour plus de transparence et de contrôle citoyen ?",
     "yes": ["Union Souveraine", "Paix et Décroissance", "Pour Une Autre Europe", "Nous le Peuple", "NPA-Révolutionnaires", "Parti des Travailleurs", "L'Europe Ça Suffit", "Non ! Prenons-nous en Main", "Liste d'Unité Nationaliste", "Réveiller l'Europe", "Communistes pour la Paix et le Progrès Social", "Reconquête!", "Parti Révolutionnaire Communistes", "Liberté Démocratique Française", "Rassemblement National"],
-    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Parti Socialiste", "Centre Gauche Européen"]
+    "no": ["Majorité Présidentielle", "PACE", "Équinoxe", "Écologie Positive", "Changer l'Europe", "Les Républicains", "La France Insoumise", "Les Écologistes", "Centre Gauche Européen"]
   }
 ]
