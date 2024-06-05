@@ -1,0 +1,11 @@
+.synthesis > ol > li {
+    list-style-type: disc;
+}
+.synthesis > ol {
+    margin-bottom: 12px;
+}
+
+.synthesis a {
+    font-weight: bold;
+    color: blue;
+}
