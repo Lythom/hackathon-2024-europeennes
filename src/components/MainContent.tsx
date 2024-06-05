@@ -65,20 +65,24 @@ function MainContent() {
   useEffect(() => {
     const answersFromURL = searchParams.get("answers");
     if (answersFromURL) {
-      const parsedAnswers = answersFromURL.split("") as Array<"y" | "n" | "u">;
-      setAnswers(parsedAnswers);
-      setStarted(true);
-      if (parsedAnswers.length === questions.length) {
-        setResultsVisible(true);
-        setStep(parsedAnswers.length);
-      } else {
-        setResultsVisible(false);
-        setStep(parsedAnswers.length + 1);
+      if (!answers.length) {
+        const parsedAnswers = answersFromURL.split("") as Array<
+          "y" | "n" | "u"
+        >;
+        setAnswers(parsedAnswers);
+        setStarted(true);
+        if (parsedAnswers.length === questions.length) {
+          setResultsVisible(true);
+          setStep(parsedAnswers.length);
+        } else {
+          setResultsVisible(false);
+          setStep(parsedAnswers.length + 1);
+        }
       }
     } else {
       setStep(0);
     }
-  }, [searchParams]);
+  }, [searchParams, answers]);
 
   const stepQuestion: Question | null = useMemo(
     () => questions[step - 1],
