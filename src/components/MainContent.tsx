@@ -24,12 +24,11 @@ export type Question = {
 };
 
 function MainContent() {
-  const [started, setStarted] = useState(false);
   const [resultsVisible, setResultsVisible] = useState(false);
   const [answers, setAnswers] = useState<Array<"y" | "n" | "u">>([]);
   const listsArray = useMemo(() => lists as ListItem[], []);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const goNext = () => setStep((prev) => prev + 1);
   const goPrev = () => setStep((prev) => prev - 1);
   const goNextDisabled = useMemo(
@@ -70,7 +69,6 @@ function MainContent() {
           "y" | "n" | "u"
         >;
         setAnswers(parsedAnswers);
-        setStarted(true);
         if (parsedAnswers.length === questions.length) {
           setResultsVisible(true);
           setStep(parsedAnswers.length);
@@ -80,7 +78,7 @@ function MainContent() {
         }
       }
     } else {
-      setStep(0);
+      setStep(1);
     }
   }, [searchParams, answers]);
 
@@ -127,25 +125,17 @@ function MainContent() {
     return listsWithWeights;
   }, [answers, listsArray]);
 
-  const startQuizz = () => {
-    setStarted(true);
-    setStep(1);
-  };
-
   const restartQuizz = () => {
     setAnswers([]);
     setResultsVisible(false);
     setStep(0);
     setSearchParams({});
-    setStarted(false);
   };
 
   return (
     <div className="flex gap-8 m-auto items-start">
       <div className="flex flex-col gap-8">
         <ProgressContainer
-          started={started}
-          setStarted={startQuizz}
           currentStep={step}
           stepsCount={questions.length}
           goNext={goNext}
@@ -167,12 +157,13 @@ function MainContent() {
       {resultsVisible ? (
         <ResultsContainer lists={listsWeights} />
       ) : (
-        <QuestionCard
-          question={stepQuestion}
-          addAnswer={addAnswer}
-          index={step - 1}
-          setStarted={startQuizz}
-        />
+        stepQuestion && (
+          <QuestionCard
+            question={stepQuestion}
+            addAnswer={addAnswer}
+            index={step - 1}
+          />
+        )
       )}
     </div>
   );

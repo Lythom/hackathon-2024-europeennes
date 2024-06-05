@@ -2,8 +2,6 @@ import Arrow from "@/assets/arrow.svg";
 import { Button } from "@/components/ui/button.tsx";
 
 type ProgressContainerProps = {
-  started: boolean;
-  setStarted: (value: boolean) => void;
   stepsCount: number;
   currentStep: number;
   goNext: () => void;
@@ -16,8 +14,6 @@ type ProgressContainerProps = {
 };
 
 const ProgressContainer = ({
-  started,
-  setStarted,
   stepsCount,
   currentStep,
   goNext,
@@ -86,14 +82,7 @@ const ProgressContainer = ({
           </div>
         </div>
         <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
-          {!started ? (
-            <Button
-              onClick={() => setStarted(true)}
-              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
-            >
-              C'est parti
-            </Button>
-          ) : !resultsVisible ? (
+          {!resultsVisible ? (
             <Button
               onClick={() => setResultsVisible(true)}
               disabled={answersCount !== stepsCount}
