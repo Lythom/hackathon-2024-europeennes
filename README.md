@@ -3,7 +3,10 @@
 Aide pour choisir sa liste aux européennes 2024.
 
 Cet outil a été créé dans le but de susciter la curiosité et d'aider à découvrir des listes qui pourraient vous plaire.
+
 Il n'est en aucun cas fiable ou exempt de biais, même si nous avons tenté de mettre autant que possible les différentes listes sur un pied d'égalité: nous n'avons pas caché de poids ou tenté de mettre en avant nos préférences.
+
+Nous avons profité de ce projet pour faire des expérimentations avec une IA générative: gpt-omni de openai. IA n'est utilisée que pour la construction de la configuration initiale (questions, synthèse des programmes, affectation des listes sur les réponses aux questions), mais le contenu généré a été relu humainement, et l'outil en lui même n'utilise aucune IA à l'utilisation. Le score par exemple est établi à partir de listes préparamétrées (voir [questions.json](src%2Fdata%2Fquestions.json)). Je pense que mettre l'IA en avant pour l'outil desservirait le propos.
 
 Construction de l'outil :
 
@@ -43,9 +46,9 @@ Construction de l'outil :
   - "J'aimerais que tu reformules la dernière synthèse de chaque partie que tu as faite au format json
     clé=nom (le même que dans le json des question)
     valeur=chaine de caractère qui contient la synthèse, avec si disponible un lien vers le site web du programme complet."
-    - [lists.json](src%2Fdata%2Fslists.json)
+    - [lists.json](src%2Fdata%2Flists.json)
 
-Cette base a ensuite été retravaillée à la main pour refaire une vérification des données produites et réajuster les affectations afin de limiter les biais de sur ou sous représentation (qui existent encore du fait que certaines listes se positionnent sur beaucoup de sujets, et d'autres sur très très peu).
+Cette base a ensuite été retravaillée, nous avons revérifié les données produites et réajusté les affectations afin de limiter les biais de sur ou sous représentation (qui existent encore du fait que certaines listes se positionnent sur beaucoup de sujets, et d'autres sur très très peu).
 
 
 ## Création d'un programme pour sauvegarder les réponses aux questions et établir un score d'affinité avec chaque liste
