@@ -12,9 +12,9 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
   const sortedLists = lists.sort((a, b) => b.weight - a.weight);
 
   return (
-    <div className="flex flex-wrap gap-6 p-12 justify-center">
+    <div className="mx-auto">
       {sortedLists.map((item, idx) => (
-        <Card key={item.name} className="max-w-md">
+        <Card key={item.name}>
           <CardHeader>
             <CardTitle>
               {idx + 1}. {item.name}{" "}

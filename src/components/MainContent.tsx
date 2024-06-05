@@ -29,14 +29,13 @@ function MainContent() {
   const [answers, setAnswers] = useState<Array<"y" | "n" | "u">>([]);
   const listsArray = useMemo(() => lists as ListItem[], []);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const goNext = () => setStep((prev) => prev + 1);
   const goPrev = () => setStep((prev) => prev - 1);
   const goNextDisabled = useMemo(
-    () => step === answers.length + 1,
+    () => step === answers.length + 1 || step === questions.length,
     [answers.length, step]
   );
-  console.log("searchParams : ", searchParams.toString());
 
   // Function to update the URL with the current answers
   const updateURL = useCallback(
@@ -71,12 +70,13 @@ function MainContent() {
       setStarted(true);
       if (parsedAnswers.length === questions.length) {
         setResultsVisible(true);
+        setStep(parsedAnswers.length);
       } else {
         setResultsVisible(false);
         setStep(parsedAnswers.length + 1);
       }
     } else {
-      setStep(1);
+      setStep(0);
     }
   }, [searchParams]);
 
@@ -123,34 +123,54 @@ function MainContent() {
     return listsWithWeights;
   }, [answers, listsArray]);
 
-  const mainClassNames = !resultsVisible
-    ? "bg-[url('./assets/vote.jpg')] bg-cover grow rounded-md flex flex-col justify-center items-center max-h-sm overflow-y-auto"
-    : "bg-[url('./assets/vote.jpg')] bg-cover grow rounded-md justify-center items-center max-h-sm overflow-y-auto";
+  const startQuizz = () => {
+    setStarted(true);
+    setStep(1);
+  };
+
+  const restartQuizz = () => {
+    setAnswers([]);
+    setResultsVisible(false);
+    setStep(0);
+    setSearchParams({});
+    setStarted(false);
+  };
 
   return (
-    <main id="content" className={mainClassNames}>
-      {!resultsVisible && (
-        <div className="flex gap-12">
-          <ProgressContainer
-            started={started}
-            setStarted={setStarted}
-            currentStep={step}
-            stepsCount={questions.length}
-            goNext={goNext}
-            goPrev={goPrev}
-            goNextDisabled={goNextDisabled}
-          />
-          {started && stepQuestion && (
-            <QuestionCard
-              question={stepQuestion}
-              addAnswer={addAnswer}
-              index={step - 1}
-            />
-          )}
+    <div className="flex gap-8 m-auto items-start">
+      <div className="flex flex-col gap-8">
+        <ProgressContainer
+          started={started}
+          setStarted={startQuizz}
+          currentStep={step}
+          stepsCount={questions.length}
+          goNext={goNext}
+          goPrev={goPrev}
+          goNextDisabled={goNextDisabled}
+          answersCount={answers.length}
+          setResultsVisible={setResultsVisible}
+          resultsVisible={resultsVisible}
+          restartQuizz={restartQuizz}
+        />
+        <div className="text-center  w-96">
+          <p className="text-xs text-gray-700">
+            Made with ❤️ by Lonestone - Hackathon 24
+            <br />
+            Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
+          </p>
         </div>
+      </div>
+      {resultsVisible ? (
+        <ResultsContainer lists={listsWeights} />
+      ) : (
+        <QuestionCard
+          question={stepQuestion}
+          addAnswer={addAnswer}
+          index={step - 1}
+          setStarted={startQuizz}
+        />
       )}
-      {started && resultsVisible && <ResultsContainer lists={listsWeights} />}
-    </main>
+    </div>
   );
 }
 

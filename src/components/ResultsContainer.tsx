@@ -7,11 +7,7 @@ type ResultsContainerProps = {
 
 const ResultsContainer = ({ lists }: ResultsContainerProps) => {
   return (
-    <div className="flex flex-col gap-4 p-12">
-      <div className="text-3xl text-white font-bold">Résultat</div>
-      <div className="italic text-md text-white font-semibold">
-        Voici les listes avec lesquelles vous semblez avoir le plus d'affinité.
-      </div>
+    <div className="questionCard max-w-2xl backdrop-blur-md border border-slate-200/70 rounded-lg py-8 px-12 justify-center items-center shadow-md gap-12 max-h-96 overflow-y-auto">
       <CardsList lists={lists} />
     </div>
   );
