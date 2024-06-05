@@ -21,11 +21,11 @@ const HomePage = () => {
         </main>
       </div>
       <footer className="mt-md text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-gray-400">
-            Réalisé lors du hackathon Lonestone 2024
-          </p>
-        </div>
+        <p className="text-xs md:text-sm text-white/60">
+          Made with ❤️ by Lonestone - Hackathon 24
+          <br />
+          Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
+        </p>
       </footer>
     </div>
   );
