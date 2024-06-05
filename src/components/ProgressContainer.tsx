@@ -21,15 +21,14 @@ const ProgressContainer = ({
 }: ProgressContainerProps) => {
   const progress = (currentStep / stepsCount) * 100;
   return (
-    <div className="flex flex-col bg-white p-12 rounded-md w-80 gap-6">
-      <p className="mt-3 text-lg text-gray-800">
-        Répondez à ces questions avec précision,
-        <br />
-        pour découvrir les listes qui sont en accord avec votre vision
+    <div className="flex flex-col bg-white py-12 px-8 rounded-md w-80 gap-6 text-left">
+      <p className="text-lg font-bold text-gray-800">
+        Répondez à l'intégralité des questions pour découvrir les listes qui
+        sont en accord avec vos réponses
       </p>
       {started && (
         <div className="flex flex-col gap-3">
-          <div className="relative">
+          <div className="relative flex justify-center">
             <div
               className="radial-progress text-blue-100 absolute"
               style={{ "--value": 100 } as React.CSSProperties}
@@ -67,7 +66,7 @@ const ProgressContainer = ({
         {!started && (
           <Button
             onClick={() => setStarted(true)}
-            className="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+            className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
           >
             Démarrer !
           </Button>

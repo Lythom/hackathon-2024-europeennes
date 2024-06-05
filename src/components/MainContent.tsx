@@ -19,8 +19,8 @@ export type ListItemWeighted = ListItem & {
 
 export type Question = {
   question: string;
-  yes: string[];
-  no: string[];
+  yes: number[];
+  no: number[];
 };
 
 function MainContent() {
@@ -103,7 +103,7 @@ function MainContent() {
           : [];
       for (const matchId of matchesIds) {
         const currentList = listsWithWeights.find(
-          (list) => list.id === parseInt(matchId, 10)
+          (list) => list.id === matchId
         );
         if (currentList) {
           currentList.weight++;
@@ -117,7 +117,7 @@ function MainContent() {
           : [];
       for (const unmatchId of unmatchesIds) {
         const currentList = listsWithWeights.find(
-          (list) => list.id === parseInt(unmatchId, 10)
+          (list) => list.id === unmatchId
         );
         if (currentList) {
           currentList.weight--;
