@@ -1,5 +1,6 @@
-import { ListItemWeighted } from "@/App";
+import Arrow from "@/assets/arrow.svg";
 import "./CardsList.css";
+import { ListItemWeighted } from "./MainContent";
 import {
   Card,
   CardContent,
@@ -13,15 +14,15 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
 
   return (
     <div className="mx-auto">
-      {sortedLists.map((item, idx) => (
+      {sortedLists.map((item) => (
         <Card key={item.name}>
           <CardHeader>
-            <CardTitle>
-              {idx + 1}. {item.name}{" "}
-            </CardTitle>
-            <span className="float-end text-lg">
-              Score d'affinité: {item.weight}
-            </span>
+            <div className="flex justify-between items-center w-full gap-2">
+              <CardTitle>{item.name}</CardTitle>
+              <span className="float-end text-sm md:text-lg text-right font-bold">
+                Score d'affinité: {item.weight}
+              </span>
+            </div>
           </CardHeader>
           <CardContent>
             <div
@@ -31,9 +32,16 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
           </CardContent>
           <CardFooter>
             <a
+              className="hidden md:block text-sm font-semibold text-gray-700 hover:underline"
               href={`https://programme-candidats.interieur.gouv.fr/elections-europeennes-2024/detail-liste.html?liste=${item.manifesto_url_id}`}
             >
-              Plus d'infos
+              Profession de foi
+            </a>
+            <a
+              href={item.list_website}
+              className="text-sm font-semibold flex gap-2 items-center text-gray-700 hover:underline"
+            >
+              Programme complet <img src={Arrow} />
             </a>
           </CardFooter>
         </Card>

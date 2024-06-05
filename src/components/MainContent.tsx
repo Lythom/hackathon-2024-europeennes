@@ -11,6 +11,7 @@ export type ListItem = {
   name: string;
   manifesto_url_id: string;
   synthesis: string;
+  list_website: string;
 };
 
 export type ListItemWeighted = ListItem & {
@@ -82,6 +83,7 @@ function MainContent() {
     }
   }, [searchParams, answers]);
 
+  // current question
   const stepQuestion: Question | null = useMemo(
     () => questions[step - 1],
     [step]
@@ -133,7 +135,7 @@ function MainContent() {
   };
 
   return (
-    <div className="flex gap-8 m-auto items-start">
+    <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-8 lg:m-auto lg:items-start z-1 lg:p-12 pb-12">
       <div className="flex flex-col gap-8">
         <ProgressContainer
           currentStep={step}
@@ -141,12 +143,10 @@ function MainContent() {
           goNext={goNext}
           goPrev={goPrev}
           goNextDisabled={goNextDisabled}
-          answersCount={answers.length}
-          setResultsVisible={setResultsVisible}
           resultsVisible={resultsVisible}
           restartQuizz={restartQuizz}
         />
-        <div className="text-center  w-96">
+        <div className="text-center lg:w-96 hidden lg:block">
           <p className="text-xs text-gray-700">
             Made with ❤️ by Lonestone - Hackathon 24
             <br />
@@ -165,6 +165,13 @@ function MainContent() {
           />
         )
       )}
+      <div className="text-center lg:w-96 lg:hidden">
+        <p className="text-xs text-gray-700">
+          Made with ❤️ by Lonestone - Hackathon 24
+          <br />
+          Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
+        </p>
+      </div>
     </div>
   );
 }

@@ -7,8 +7,6 @@ type ProgressContainerProps = {
   goNext: () => void;
   goPrev: () => void;
   goNextDisabled: boolean;
-  answersCount: number;
-  setResultsVisible: (value: boolean) => void;
   resultsVisible: boolean;
   restartQuizz: () => void;
 };
@@ -19,16 +17,14 @@ const ProgressContainer = ({
   goNext,
   goPrev,
   goNextDisabled,
-  answersCount,
-  setResultsVisible,
   resultsVisible,
   restartQuizz,
 }: ProgressContainerProps) => {
   const progress = (currentStep / stepsCount) * 100;
   return (
-    <div className="flex flex-col grow bg-white pb-8 pt-24 px-8 rounded-lg shadow-md w-96 gap-8 text-left">
+    <div className="lg:flex lg:flex-col lg:w-96 w-full bg-white pb-8 pt-8 lg:pt-24 px-8 rounded-lg shadow-md gap-8 text-left">
       <div>
-        <p className="text-xl text-gray-800">
+        <p className="text-xl text-gray-800 hidden lg:block">
           Répondez à l'intégralité des questions pour découvrir les listes qui
           sont en accord avec vos réponses
         </p>
@@ -81,31 +77,31 @@ const ProgressContainer = ({
             </Button>
           </div>
         </div>
-        <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
-          {!resultsVisible ? (
-            <Button
-              onClick={() => setResultsVisible(true)}
-              disabled={answersCount !== stepsCount}
-              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
-            >
-              Obtenir mon résultat
-            </Button>
-          ) : (
+        {resultsVisible && (
+          <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
             <Button
               onClick={restartQuizz}
               className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
             >
               Recommencer
             </Button>
-          )}
-        </div>
+          </div>
+        )}
       </div>
-      <a
-        href="https://lonestone.io"
-        className="text-sm text-center text-slate-800 font-semibold underline"
-      >
-        En savoir plus sur Lonestone
-      </a>
+      <div className="flex-col gap-2 hidden lg:flex">
+        <a
+          href="https://lonestone.io"
+          className="text-sm text-center text-slate-800 font-semibold underline"
+        >
+          En savoir plus sur Lonestone
+        </a>
+        <a
+          href="https://github.com/lonestone/hackathon-2024-europeennes/tree/main#readme"
+          className="text-sm text-center text-slate-800 italic hover:underline"
+        >
+          Comment a été créé ce questionnaire ?
+        </a>
+      </div>
     </div>
   );
 };
