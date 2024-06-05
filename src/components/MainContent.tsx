@@ -156,7 +156,10 @@ function MainContent() {
         </div>
       </div>
       {resultsVisible ? (
-        <ResultsContainer lists={listsWeights} />
+        <>
+          <ShareButton />
+          <ResultsContainer lists={listsWeights} />
+        </>
       ) : (
         stepQuestion && (
           <QuestionCard
