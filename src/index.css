@@ -52,3 +52,8 @@ h1 {
   font-size: 3.2em;
   line-height: 1.5;
 }
+
+.cta-button {
+  background: radial-gradient(#0061FF, #003A99);
+  color: white;
+}

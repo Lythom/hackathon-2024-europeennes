@@ -22,13 +22,17 @@ const ProgressContainer = ({
 }: ProgressContainerProps) => {
   const progress = (currentStep / stepsCount) * 100;
   return (
-    <div className="lg:flex lg:flex-col lg:w-96 w-full bg-white pb-8 pt-8 lg:pt-24 px-8 rounded-lg shadow-md gap-8 text-left">
+    <div className="flex flex-col lg:w-96 w-full bg-white pb-8 pt-8 lg:pt-8 px-8 rounded-lg shadow-md gap-8 text-left">
       <div>
-        <p className="text-xl text-gray-800 hidden lg:block">
+        {!resultsVisible && <p className="text-xl text-gray-800 pt-12 pb-4">
           Répondez à l'intégralité des questions pour découvrir les listes qui
           sont en accord avec vos réponses
-        </p>
-        <div className="flex flex-col gap-3 py-5 px-4 rounded-md shadow-sm">
+        </p>}
+        {resultsVisible && <p className="text-xl text-gray-800 pb-8">
+          <div className="text-3xl font-bold pb-4">Résultat</div>
+          <div>Voici les listes avec lesquelles vous semblez avoir le plus d’affinité.</div>
+        </p>}
+        {!resultsVisible && <div className="flex flex-col gap-3 py-5 px-4 rounded-md shadow-sm">
           <div className="flex gap-4">
             <div className="relative flex justify-center">
               <div
@@ -76,19 +80,19 @@ const ProgressContainer = ({
               Suivant <img src={Arrow} className="ml-2" />
             </Button>
           </div>
-        </div>
+        </div>}
         {resultsVisible && (
           <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
             <Button
               onClick={restartQuizz}
-              className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
+              className="cta-button w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
             >
               Recommencer
             </Button>
           </div>
         )}
       </div>
-      <div className="flex-col gap-2 hidden lg:flex">
+      <div className="flex-col gap-2 flex">
         <a
           href="https://lonestone.io"
           className="text-sm text-center text-slate-800 font-semibold underline"

@@ -5,6 +5,7 @@ import questions from "../data/questions.json";
 import ProgressContainer from "./ProgressContainer";
 import QuestionCard from "./QuestionCard";
 import ResultsContainer from "./ResultsContainer";
+import { ShareButton } from "@/components/ShareButton.tsx";
 
 export type ListItem = {
   id: number;
@@ -99,8 +100,8 @@ function MainContent() {
         currentAnswer === "y"
           ? currentQuestion.yes
           : currentAnswer === "n"
-          ? currentQuestion.no
-          : [];
+            ? currentQuestion.no
+            : [];
       for (const matchId of matchesIds) {
         const currentList = listsWithWeights.find(
           (list) => list.id === matchId
@@ -113,8 +114,8 @@ function MainContent() {
         currentAnswer === "y"
           ? currentQuestion.no
           : currentAnswer === "n"
-          ? currentQuestion.yes
-          : [];
+            ? currentQuestion.yes
+            : [];
       for (const unmatchId of unmatchesIds) {
         const currentList = listsWithWeights.find(
           (list) => list.id === unmatchId
@@ -135,7 +136,7 @@ function MainContent() {
   };
 
   return (
-    <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-8 lg:m-auto lg:items-start z-1 lg:p-12 pb-12">
+    <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-8 lg:mx-auto lg:items-start z-1">
       <div className="flex flex-col gap-8">
         <ProgressContainer
           currentStep={step}

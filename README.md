@@ -6,7 +6,7 @@ Cet outil a été créé dans le but de susciter la curiosité et d'aider à dé
 
 Il n'est en aucun cas fiable ou exempt de biais, même si nous avons tenté de mettre autant que possible les différentes listes sur un pied d'égalité: nous n'avons pas caché de poids ou tenté de mettre en avant nos préférences.
 
-Nous avons profité de ce projet pour faire des expérimentations avec une IA générative: gpt-omni de openai. IA n'est utilisée que pour la construction de la configuration initiale (questions, synthèse des programmes, affectation des listes sur les réponses aux questions), mais le contenu généré a été relu humainement, et l'outil en lui même n'utilise aucune IA à l'utilisation. Le score par exemple est établi à partir de listes préparamétrées (voir [questions.json](src%2Fdata%2Fquestions.json)). Je pense que mettre l'IA en avant pour l'outil desservirait le propos.
+Nous avons profité de ce projet pour faire des expérimentations avec une IA générative: gpt-omni de openai. IA n'est utilisée que pour la construction de la configuration initiale (questions, synthèse des programmes, affectation des listes sur les réponses aux questions), mais le contenu généré a été relu humainement, et l'outil en lui même ne s'appuie sur aucune IA à l'utilisation. Le score par exemple est établi à partir de listes préparamétrées (voir [questions.json](src%2Fdata%2Fquestions.json)).
 
 Construction de l'outil :
 
