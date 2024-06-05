@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import lists from "../lists.json";
-import questions from "../questions.json";
+import lists from "../data/lists.json";
+import questions from "../data/questions.json";
 import ProgressContainer from "./ProgressContainer";
 import QuestionCard from "./QuestionCard";
 import ResultsContainer from "./ResultsContainer";
@@ -26,7 +26,7 @@ export type Question = {
 function MainContent() {
   const [started, setStarted] = useState(false);
   const [resultsVisible, setResultsVisible] = useState(false);
-  const [answers, setAnswers] = useState<Array<"yes" | "no" | "unsure">>([]);
+  const [answers, setAnswers] = useState<Array<"y" | "n" | "u">>([]);
   const listsArray = useMemo(() => lists as ListItem[], []);
   const [searchParams, setSearchParams] = useSearchParams();
   const [step, setStep] = useState(1);
@@ -40,21 +40,19 @@ function MainContent() {
 
   // Function to update the URL with the current answers
   const updateURL = useCallback(
-    (answers: Array<"yes" | "no" | "unsure">) => {
-      setSearchParams({ answers: answers.join(",") });
+    (answers: Array<"y" | "n" | "u">) => {
+      setSearchParams({ answers: answers.join("") });
     },
     [setSearchParams]
   );
 
   // Function to add an answer and update the URL
   const addAnswer = useCallback(
-    (a: "yes" | "no" | "unsure", index: number) => {
+    (a: "y" | "n" | "u", index: number) => {
       const newAnswers = [...answers];
       newAnswers[index] = a;
       setAnswers(newAnswers);
       updateURL(newAnswers);
-      console.log("questions.length", questions.length);
-      console.log("newAnswers.length : ", newAnswers.length);
       if (questions.length === newAnswers.length) {
         setResultsVisible(true);
       } else {
@@ -68,9 +66,7 @@ function MainContent() {
   useEffect(() => {
     const answersFromURL = searchParams.get("answers");
     if (answersFromURL) {
-      const parsedAnswers = answersFromURL.split(",") as Array<
-        "yes" | "no" | "unsure"
-      >;
+      const parsedAnswers = answersFromURL.split("") as Array<"y" | "n" | "u">;
       setAnswers(parsedAnswers);
       setStarted(true);
       if (parsedAnswers.length === questions.length) {
@@ -96,9 +92,9 @@ function MainContent() {
       const currentAnswer = answers[i];
       const currentQuestion = questions[i];
       const matchesIds =
-        currentAnswer === "yes"
+        currentAnswer === "y"
           ? currentQuestion.yes
-          : currentAnswer === "no"
+          : currentAnswer === "n"
           ? currentQuestion.no
           : [];
       for (const matchId of matchesIds) {
@@ -110,9 +106,9 @@ function MainContent() {
         }
       }
       const unmatchesIds =
-        currentAnswer === "yes"
+        currentAnswer === "y"
           ? currentQuestion.no
-          : currentAnswer === "no"
+          : currentAnswer === "n"
           ? currentQuestion.yes
           : [];
       for (const unmatchId of unmatchesIds) {
