@@ -6,7 +6,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "./ui/card";
 
 const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
@@ -17,10 +17,10 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
       {sortedLists.map((item) => (
         <Card key={item.name}>
           <CardHeader>
-            <div className="flex justify-between items-center w-full gap-2">
+            <div className="flex flex-col md:flex-row md:justify-between w-full gap-2">
               <CardTitle>{item.name}</CardTitle>
-              <span className="float-end text-sm md:text-lg text-right font-bold">
-                Score d'affinité: {item.weight}
+              <span className="text-sm md:text-lg text-left md:text-right whitespace-nowrap">
+                Score d'affinité: <b>{item.weight}</b>
               </span>
             </div>
           </CardHeader>
@@ -39,7 +39,7 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
             </a>
             <a
               href={item.list_website}
-              className="text-sm font-semibold flex gap-2 items-center text-gray-700 hover:underline"
+              className="text-sm text-blue-700 font-semibold flex gap-2 items-center hover:underline"
             >
               Programme complet <img src={Arrow} />
             </a>

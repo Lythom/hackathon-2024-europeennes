@@ -1,14 +1,19 @@
 import copySvg from "@/components/icons/copy.svg";
-import shareSvg from "@/components/icons/share.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu.tsx";
+import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
+import { Share } from "./icons/share";
 
-export function ShareButton() {
+type ShareButtonProps = {
+  className?: string;
+};
+
+export function ShareButton({ className }: ShareButtonProps) {
   const inputShare = useRef<HTMLInputElement>(null);
   const inputShareResult = useRef<HTMLInputElement>(null);
 
@@ -32,10 +37,15 @@ export function ShareButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        style={{ top: -54, right: 0, zIndex: 60 }}
-        className="absolute cta-button inline-flex items-center justify-center whitespace-nowrap rounded-sm text-sm font-semibold ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-12 py-4"
+        className={cn(
+          "inline-flex items-center justify-center whitespace-nowrap rounded-sm text-sm font-semibold ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-12 py-4",
+          className
+        )}
       >
-        Partager <img src={shareSvg} className="pl-2" />
+        Partager{" "}
+        <div className="pl-2">
+          <Share />
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"

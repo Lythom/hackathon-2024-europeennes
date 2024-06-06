@@ -57,3 +57,9 @@ h1 {
   background: radial-gradient(116.57% 94.72% at 38.75% 12.74%, rgba(0, 97, 255, 1) 0%, rgba(0, 58, 153, 1) 100%);
   color: white;
 }
+
+.cta-outline-button {
+  background: transparent;
+  border: 1px solid rgba(0, 97, 255, 1);
+  color: rgba(0, 97, 255, 1);
+}

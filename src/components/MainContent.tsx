@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import lists from "../data/lists.json";
 import questions from "../data/questions.json";
 import Credits from "./Credits";
+import MobileRecapContainer from "./MobileRecapContainer";
 import ProgressContainer from "./ProgressContainer";
 import QuestionCard from "./QuestionCard";
 import ResultsContainer from "./ResultsContainer";
@@ -152,8 +153,11 @@ function MainContent() {
       </div>
       {resultsVisible ? (
         <>
-          <ShareButton />
+          <div className="hidden md:block absolute top-[-54px] right-0">
+            <ShareButton className="cta-button" />
+          </div>
           <ResultsContainer lists={listsWeights} />
+          <MobileRecapContainer restartQuizz={restartQuizz} />
         </>
       ) : (
         stepQuestion && (

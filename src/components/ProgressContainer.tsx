@@ -1,5 +1,7 @@
 import Arrow from "@/assets/arrow.svg";
 import { Button } from "@/components/ui/button.tsx";
+import { ShareButton } from "./ShareButton";
+import { Info } from "./icons/info";
 
 type ProgressContainerProps = {
   stepsCount: number;
@@ -25,18 +27,18 @@ const ProgressContainer = ({
     <div className="flex flex-col lg:w-96 w-full bg-white pb-8 pt-8 lg:pt-8 px-8 rounded-lg shadow-md gap-8 text-left">
       <div>
         {!resultsVisible && (
-          <p className="text-xl text-gray-800 pt-12 pb-4">
+          <p className="text-xl text-gray-700 md:pt-12 pb-4">
             Répondez à l'intégralité des questions pour découvrir les listes qui
             sont en accord avec vos réponses
           </p>
         )}
         {resultsVisible && (
-          <p className="text-xl text-gray-800 pb-8">
+          <p className="text-xl text-gray-700 md:pb-8">
             <div className="text-3xl font-bold pb-4">Résultat</div>
-            <div>
+            <p className="text-base md:text-xl">
               Voici les listes avec lesquelles vous semblez avoir le plus
               d’affinité.
-            </div>
+            </p>
           </p>
         )}
         {!resultsVisible && (
@@ -91,28 +93,31 @@ const ProgressContainer = ({
           </div>
         )}
         {resultsVisible && (
-          <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
+          <div className="hidden md:block flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
             <Button
               onClick={restartQuizz}
               className="cta-button w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-sm border-0 border-transparent bg-slate-200 text-gray-800 hover:bg-slate-100 hover:border-transparent disabled:opacity-50 disabled:pointer-events-none"
             >
               Recommencer
             </Button>
+            <div className="block md:hidden">
+              <ShareButton />
+            </div>
           </div>
         )}
       </div>
-      <div className="flex-col gap-2 flex">
+      <div className="flex flex-col gap-6 items-center">
         <a
           href="https://lonestone.io"
-          className="text-sm text-center text-slate-800 font-semibold underline"
+          className="hidden md:block text-sm text-center text-slate-800 font-semibold underline"
         >
           En savoir plus sur Lonestone
         </a>
         <a
           href="https://github.com/lonestone/hackathon-2024-europeennes/tree/main#readme"
-          className="text-sm text-center text-slate-800 italic hover:underline"
+          className="flex items-center gap-2 text-sm text-center text-neutral-500 italic hover:underline"
         >
-          Comment a été créé ce questionnaire ?
+          <Info /> Comment a été créé ce questionnaire ?
         </a>
       </div>
     </div>

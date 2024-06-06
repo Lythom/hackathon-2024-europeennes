@@ -12,7 +12,14 @@ const Credits = ({ className }: CreditsProps) => {
         </a>{" "}
         - Hackathon 24
         <br />
-        Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
+        <a href="https://www.linkedin.com/in/samuel-bouchet-077080262/">
+          Samuel Bouchet
+        </a>{" "}
+        -{" "}
+        <a href="https://www.linkedin.com/in/alexandre-delaunay-12744a107/">
+          Alexandre Delaunay
+        </a>{" "}
+        - <a href="https://www.linkedin.com/in/adelinehamon/">Adeline Hamon</a>
       </p>
     </div>
   );
