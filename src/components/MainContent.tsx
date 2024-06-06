@@ -1,11 +1,12 @@
+import { ShareButton } from "@/components/ShareButton.tsx";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import lists from "../data/lists.json";
 import questions from "../data/questions.json";
+import Credits from "./Credits";
 import ProgressContainer from "./ProgressContainer";
 import QuestionCard from "./QuestionCard";
 import ResultsContainer from "./ResultsContainer";
-import { ShareButton } from "@/components/ShareButton.tsx";
 
 export type ListItem = {
   id: number;
@@ -137,7 +138,7 @@ function MainContent() {
 
   return (
     <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-8 lg:mx-auto lg:items-start z-1">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 md:mb-8">
         <ProgressContainer
           currentStep={step}
           stepsCount={questions.length}
@@ -147,13 +148,7 @@ function MainContent() {
           resultsVisible={resultsVisible}
           restartQuizz={restartQuizz}
         />
-        <div className="text-center lg:w-96 hidden lg:block">
-          <p className="text-xs text-gray-700">
-            Made with ❤️ by Lonestone - Hackathon 24
-            <br />
-            Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
-          </p>
-        </div>
+        <Credits className="text-center lg:w-96 hidden lg:block" />
       </div>
       {resultsVisible ? (
         <>
@@ -169,13 +164,7 @@ function MainContent() {
           />
         )
       )}
-      <div className="text-center lg:w-96 lg:hidden">
-        <p className="text-xs text-gray-700">
-          Made with ❤️ by Lonestone - Hackathon 24
-          <br />
-          Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
-        </p>
-      </div>
+      <Credits className="text-center lg:w-96 lg:hidden mb-8" />
     </div>
   );
 }
