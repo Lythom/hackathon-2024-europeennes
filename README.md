@@ -57,4 +57,4 @@ Vite + typescript + react + shadcn
 
 `npm i`
 
-`npm start`
+`npm run dev`
