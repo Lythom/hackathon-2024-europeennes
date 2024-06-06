@@ -8,7 +8,7 @@
     ]
   },
   {
-    "question": "Soutenez-vous des mesures ambitieuses pour atteindre 100% d'énergies renouvelables ?",
+    "question": "Soutenez-vous des mesures pour atteindre 100% d'énergies renouvelables ?",
     "yes": [3, 4, 5, 6, 8, 9, 10, 25, 28, 29, 31],
     "no": [1, 2, 7, 24, 21, 22, 35]
   },
@@ -51,7 +51,7 @@
     "no": [1, 2, 7, 24, 21, 22, 35]
   },
   {
-    "question": "Préférez-vous renforcer les capacités de défense nationales et l'OTAN ?",
+    "question": "Préférez-vous renforcer les capacités de défense nationale et l'OTAN ?",
     "yes": [1, 2, 7, 24, 21],
     "no": [3, 5, 6, 9, 10, 31, 37]
   },
