@@ -10,7 +10,7 @@ const QuestionsPage = () => {
           className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
           aria-label="Global"
         >
-          <div className="flex w-full items-center justify-center max-w-md mx-auto">
+          <div className="flex md:w-full items-center justify-center max-w-52 md:max-w-md mx-auto">
             <img src={Logo} />
           </div>
         </nav>

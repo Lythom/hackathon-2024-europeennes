@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logo-blue.png";
 import "./HomePage.css";
 
 const HomePage = () => {
   const navigate = useNavigate();
   return (
-    <div className="homePage flex flex-col mx-auto size-full p-12 gap-12">
+    <div className="homePage flex flex-col mx-auto size-full p-8 md:p-12 gap-12">
       <div className="flex flex-col grow justify-center items-center gap-24">
         <div className="flex justify-center items-center max-w-4xl">
           <img src={Logo} />

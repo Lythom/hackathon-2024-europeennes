@@ -13,7 +13,7 @@ type QuestionCardProps = {
 
 const QuestionCard = ({ question, addAnswer, index }: QuestionCardProps) => {
   return (
-    <div className="questionCard flex flex-col w-full lg:max-w-2xl border border-slate-200/70 rounded-lg pt-4 pb-8 px-16 md:py-8 md:px-12 justify-between shadow-md gap-12">
+    <div className="questionCard flex flex-col w-full lg:max-w-2xl border border-slate-200/70 rounded-lg pt-4 py-8 px-6 md:py-8 md:px-12 justify-between shadow-md gap-12 backdrop-blur-sm">
       <h1 className="mt-3 text-2xl md:text-4xl text-white font-bold text-left">
         {question.question}
       </h1>
