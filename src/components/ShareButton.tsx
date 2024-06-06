@@ -72,7 +72,9 @@ export function ShareButton({ className }: ShareButtonProps) {
                 className="p-2 w-8"
                 alt="copy"
               />
-              {inputChecked && <span className="pr-2">✔</span>}
+              {inputChecked && (
+                <span className="pr-2 text-color-white">✔</span>
+              )}
             </button>
           </div>
         </DropdownMenuLabel>
@@ -96,7 +98,9 @@ export function ShareButton({ className }: ShareButtonProps) {
                 className="p-2 w-8"
                 alt="copy"
               />
-              {inputResultChecked && <span className="pr-2">✔</span>}
+              {inputResultChecked && (
+                <span className="pr-2 text-color-white">✔</span>
+              )}
             </button>
           </div>
         </DropdownMenuLabel>

@@ -138,7 +138,7 @@ function MainContent() {
   };
 
   return (
-    <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-8 lg:mx-auto lg:items-start z-1">
+    <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-4 md:gap-8 lg:mx-auto lg:items-start z-1">
       <div className="flex flex-col gap-8 md:mb-8">
         <ProgressContainer
           currentStep={step}
@@ -153,7 +153,7 @@ function MainContent() {
       </div>
       {resultsVisible ? (
         <>
-          <div className="hidden md:block absolute top-[-54px] right-0">
+          <div className="hidden md:block absolute top-[-54px] right-0 z-10">
             <ShareButton className="cta-button" />
           </div>
           <ResultsContainer lists={listsWeights} />

@@ -1,6 +1,6 @@
-import Arrow from "@/assets/arrow.svg";
 import { Button } from "@/components/ui/button.tsx";
 import { ShareButton } from "./ShareButton";
+import { Arrow } from "./icons/arrow";
 import { Info } from "./icons/info";
 
 type ProgressContainerProps = {
@@ -79,7 +79,10 @@ const ProgressContainer = ({
                   currentStep === 1 || currentStep === 0 || resultsVisible
                 }
               >
-                <img src={Arrow} className="rotate-180 mr-2" /> Précédent
+                <div className="rotate-180 mr-2">
+                  <Arrow />
+                </div>{" "}
+                Précédent
               </Button>
               <Button
                 variant="ghost"
@@ -87,7 +90,10 @@ const ProgressContainer = ({
                 onClick={goNext}
                 disabled={goNextDisabled || currentStep === 0 || resultsVisible}
               >
-                Suivant <img src={Arrow} className="ml-2" />
+                Suivant{" "}
+                <div className="ml-2">
+                  <Arrow />
+                </div>
               </Button>
             </div>
           </div>
@@ -106,7 +112,7 @@ const ProgressContainer = ({
           </div>
         )}
       </div>
-      <div className="flex flex-col gap-6 items-center">
+      <div className="flex flex-col gap-6 md:items-center">
         <a
           href="https://lonestone.io"
           className="hidden md:block text-sm text-center text-slate-800 font-semibold underline"

@@ -1,6 +1,6 @@
-import Arrow from "@/assets/arrow.svg";
 import "./CardsList.css";
 import { ListItemWeighted } from "./MainContent";
+import { Arrow } from "./icons/arrow";
 import {
   Card,
   CardContent,
@@ -32,7 +32,7 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
           </CardContent>
           <CardFooter>
             <a
-              className="hidden md:block text-sm font-semibold text-gray-700 hover:underline"
+              className="hidden md:block text-sm font-semibold text-blue-700 hover:underline"
               href={`https://programme-candidats.interieur.gouv.fr/elections-europeennes-2024/detail-liste.html?liste=${item.manifesto_url_id}`}
             >
               Profession de foi
@@ -41,7 +41,7 @@ const CardsList = ({ lists }: { lists: ListItemWeighted[] }) => {
               href={item.list_website}
               className="text-sm text-blue-700 font-semibold flex gap-2 items-center hover:underline"
             >
-              Programme complet <img src={Arrow} />
+              Programme complet <Arrow />
             </a>
           </CardFooter>
         </Card>
