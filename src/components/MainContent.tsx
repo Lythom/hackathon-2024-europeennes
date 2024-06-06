@@ -137,6 +137,10 @@ function MainContent() {
     setSearchParams({});
   };
 
+  useEffect(() => {
+    if (resultsVisible) window.scrollTo(0, 0);
+  }, [resultsVisible]);
+
   return (
     <div className="mainContent relative flex flex-col w-full lg:w-auto lg:flex-row gap-4 md:gap-8 lg:mx-auto lg:items-start z-1">
       <div className="flex flex-col gap-8 md:mb-8">
