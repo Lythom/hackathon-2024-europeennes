@@ -6,7 +6,7 @@ import "./HomePage.css";
 const HomePage = () => {
   const navigate = useNavigate();
   return (
-    <div className="homePage flex flex-col mx-auto size-full p-8 md:p-12 gap-12">
+    <div className="homePage flex flex-col mx-auto size-full p-8 md:p-12 gap-12 relative z-1">
       <div className="flex flex-col grow justify-center items-center gap-24">
         <div className="flex justify-center items-center max-w-4xl">
           <img src={Logo} />

@@ -165,6 +165,7 @@ function MainContent() {
             question={stepQuestion}
             addAnswer={addAnswer}
             index={step - 1}
+            currentAnswer={answers[step - 1]}
           />
         )
       )}
