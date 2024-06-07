@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/logo-blue.png";
 import "./HomePage.css";
+import Credits from "@/components/Credits.tsx";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -21,11 +22,7 @@ const HomePage = () => {
         </main>
       </div>
       <footer className="mt-md text-center">
-        <p className="text-xs md:text-sm text-white/60">
-          Made with ❤️ by Lonestone - Hackathon 24
-          <br />
-          Samuel Bouchet - Alexandre Delaunay - Adeline Hamon
-        </p>
+        <Credits className="text-center text-white/60" />
       </footer>
     </div>
   );

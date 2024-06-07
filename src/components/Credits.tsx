@@ -5,7 +5,7 @@ type CreditsProps = {
 const Credits = ({ className }: CreditsProps) => {
   return (
     <div className={className}>
-      <p className="text-xs text-gray-700">
+      <p className="text-xs">
         Made with ❤️ by{" "}
         <a className="font-bold" href="https://lonestone.io">
           Lonestone

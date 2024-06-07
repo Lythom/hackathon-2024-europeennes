@@ -153,7 +153,7 @@ function MainContent() {
           resultsVisible={resultsVisible}
           restartQuizz={restartQuizz}
         />
-        <Credits className="text-center lg:w-96 hidden lg:block" />
+        <Credits className="text-center lg:w-96 hidden lg:block text-gray-700" />
       </div>
       {resultsVisible ? (
         <>
@@ -173,7 +173,7 @@ function MainContent() {
           />
         )
       )}
-      <Credits className="text-center lg:w-96 lg:hidden mb-8" />
+      <Credits className="text-center lg:w-96 lg:hidden mb-8 text-gray-700" />
     </div>
   );
 }
